@@ -145,6 +145,25 @@ public class lab5 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+/* Return the Greatest common divisor */ 
+public static long gcd( long a , long b ) 
+{ 
+if (b==0) 
+return a; 
+else 
+return gcd ( b , a%b); 
+} 
+
+ public static boolean isPrime(long num){
+        long temp;
+	boolean isPrime=true;
+        for(int i=2;i<=num/2;i++)
+	{ temp=num%i;
+	   if(temp==0)
+	   {isPrime=false;
+	      break; }}
+        return isPrime;   }
+
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       String message = worrd.getText();
